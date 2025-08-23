@@ -44,7 +44,7 @@ export default function Features() {
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                GoWappily Technologies
+                GoWappily Infotech
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
@@ -68,18 +68,6 @@ export default function Features() {
           </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
-            <article>
-              <div className="flex items-center gap-2 mb-2">
-                <ServerIcon className="h-6 w-6" />
-                <h3 className=" font-nacelle text-[1rem] font-semibold text-gray-200">
-                  Hosting & Cloud Services
-                </h3>
-              </div>
-              <p className="text-indigo-200/65 pl-8">
-                Shared hosting, VPS, dedicated servers, cloud storage, domain
-                registration, and SSL — secure, reliable, and scalable.
-              </p>
-            </article>
             <article>
               <div className="flex items-center gap-2 mb-2">
                 <CodeIcon className="h-6 w-6" />
@@ -116,6 +104,19 @@ export default function Features() {
                 and catalog ads for better engagement and sales.
               </p>
             </article>
+            <article>
+              <div className="flex items-center gap-2 mb-2">
+                <ServerIcon className="h-6 w-6" />
+                <h3 className=" font-nacelle text-[1rem] font-semibold text-gray-200">
+                  Hosting & Cloud Services
+                </h3>
+              </div>
+              <p className="text-indigo-200/65 pl-8">
+                Shared hosting, VPS, dedicated servers, cloud storage, domain
+                registration, and SSL — secure, reliable, and scalable.
+              </p>
+            </article>
+
             <article>
               <div className="flex items-center gap-2 mb-2">
                 <BrushIcon className="h-6 w-6" />

@@ -13,7 +13,7 @@ export default function TerminalPreloader() {
 
   useEffect(() => {
     const conf = {
-      welcomeText: "Welcome to GoWappily Technologies",
+      welcomeText: "Welcome to GoWappily Infotech",
       minShowMs: 1400,
       holdAfterCompleteMs: 420,
       useGate: true,
@@ -330,7 +330,7 @@ export default function TerminalPreloader() {
                 fill="url(#g)"
               />
             </svg>
-            <strong>GoWappily TECHNOLOGIES</strong>
+            <strong>GoWappily Infotech</strong>
           </div>
           <div className="screen" ref={screenRef}></div>
           <div className="progressWrap">
@@ -371,7 +371,7 @@ export default function TerminalPreloader() {
             }}
           >
             <h1 style={{ margin: "0 0 10px", color: "#baffbf" }}>
-              Welcome to GoWappily Technologies
+              Welcome to GoWappily Infotech
             </h1>
             <p style={{ margin: 0, color: "#d5ffdc", opacity: 0.9 }}>
               This is your main site content. The terminal preloader runs once

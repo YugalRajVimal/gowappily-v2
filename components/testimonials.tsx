@@ -30,7 +30,7 @@ const testimonials = [
     name: "Rajesh K.",
     company: "Tata Consultancy Services",
     content:
-      "GoWappily Technologies transformed the way our teams collaborate across multiple geographies. Their cloud integration solutions have made our systems faster, more secure, and highly scalable.",
+      "GoWappily Infotech transformed the way our teams collaborate across multiple geographies. Their cloud integration solutions have made our systems faster, more secure, and highly scalable.",
     categories: [1, 3, 5],
   },
   {
@@ -39,7 +39,7 @@ const testimonials = [
     name: "Aisha M.",
     company: "Siemens",
     content:
-      "The AI-driven automation solutions from GoWappily Technologies have helped us reduce operational costs by 40%. Their deep understanding of enterprise requirements is unmatched.",
+      "The AI-driven automation solutions from GoWappily Infotech have helped us reduce operational costs by 40%. Their deep understanding of enterprise requirements is unmatched.",
     categories: [1, 2, 4],
   },
   {
@@ -48,7 +48,7 @@ const testimonials = [
     name: "Michael L.",
     company: "Rio Tinto",
     content:
-      "Our digital transformation journey was stuck until we partnered with CVA Core Technologies. They streamlined workflows, integrated data pipelines, and boosted overall efficiency significantly.",
+      "Our digital transformation journey was stuck until we partnered with GoWappily Infotech. They streamlined workflows, integrated data pipelines, and boosted overall efficiency significantly.",
     categories: [1, 2, 5],
   },
   {
@@ -66,7 +66,7 @@ const testimonials = [
     name: "Ethan W.",
     company: "Cadbury International",
     content:
-      "GoWappily Technologies’ IoT and AI solutions have allowed us to optimize our supply chain in real time. It’s like having a control center that predicts and resolves issues instantly.",
+      "GoWappily Infotech’ IoT and AI solutions have allowed us to optimize our supply chain in real time. It’s like having a control center that predicts and resolves issues instantly.",
     categories: [1, 3, 5],
   },
   {
@@ -75,7 +75,7 @@ const testimonials = [
     name: "Laura P.",
     company: "Maffell",
     content:
-      "What impressed us most about GoWappily Technologies was their ability to integrate complex AI models into our existing systems without disrupting ongoing operations.",
+      "What impressed us most about GoWappily Infotech was their ability to integrate complex AI models into our existing systems without disrupting ongoing operations.",
     categories: [1, 3],
   },
   {
@@ -84,7 +84,7 @@ const testimonials = [
     name: "Sandeep V.",
     company: "Binance",
     content:
-      "GoWappily Technologies built our secure blockchain integration platform in record time. The performance and reliability have exceeded our highest expectations.",
+      "GoWappily Infotech built our secure blockchain integration platform in record time. The performance and reliability have exceeded our highest expectations.",
     categories: [1, 2, 5],
   },
   {
@@ -93,7 +93,7 @@ const testimonials = [
     name: "Jessica F.",
     company: "Forbes Media",
     content:
-      "Their data analytics dashboard is sleek, intuitive, and lightning-fast. GoWappily Technologies has made enterprise data insights accessible and actionable for our teams.",
+      "Their data analytics dashboard is sleek, intuitive, and lightning-fast. GoWappily Infotech has made enterprise data insights accessible and actionable for our teams.",
     categories: [1, 4],
   },
   {
@@ -102,7 +102,7 @@ const testimonials = [
     name: "Mark D.",
     company: "Ray-Ban",
     content:
-      "We were looking for a partner who could handle AI, cloud, and cybersecurity together — GoWappily Technologies delivered all of that in one unified solution.",
+      "We were looking for a partner who could handle AI, cloud, and cybersecurity together — GoWappily Infotech delivered all of that in one unified solution.",
     categories: [1, 2],
   },
 ];

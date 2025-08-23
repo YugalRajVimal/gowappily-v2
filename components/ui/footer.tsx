@@ -19,7 +19,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row  justify-between gap-6 py-8  md:py-12  xl:gap-20">
+        <div className="flex flex-col md:flex-row justify-between gap-6 py-8 md:py-12 xl:gap-20">
           {/* About GoWappily */}
           <div className="space-y-2 flex-2">
             <div className="mb-1 text-xl font-mono">
@@ -27,13 +27,12 @@ export default function Footer() {
               GoWappily
             </div>
             <h3 className="text-sm font-medium text-gray-200">
-              About GoWappily Technologies
+              About GoWappily Infotech
             </h3>
             <p className="text-sm text-indigo-200/65">
-              GoWappily Technologies is a full-service digital solutions
-              provider offering 45+ professional services under one roof. We
-              empower businesses with innovative, reliable, and result-driven
-              solutions.
+              GoWappily Infotech is a full-service digital solutions provider
+              offering 45+ professional services under one roof. We empower
+              businesses with innovative, reliable, and result-driven solutions.
             </p>
           </div>
 
@@ -51,7 +50,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Hosting & Cloud */}
+          {/* Quick Links */}
           <div className="space-y-2 flex-1">
             <h3 className="text-sm font-medium text-gray-200">Quick Links</h3>
             <ul className="space-y-2 text-sm text-indigo-200/65">
@@ -97,12 +96,26 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Contact Information */}
+          <div className="space-y-2 flex-1">
+            <h3 className="text-sm font-medium text-gray-200">Contact Us</h3>
+            <p className="text-sm text-indigo-200/65">Address: G-13,Sector 6 Noida</p>
+            <p className="text-sm text-indigo-200/65">Phone: +91 6398 960 435</p>
+            <p className="text-sm text-indigo-200/65">Phone: +91 88005 92770</p>
+            <p className="text-sm text-indigo-200/65">Email: info@gowappily.com</p>
+            <div className="flex space-x-2">
+              <a href="https://www.facebook.com/share/1JDm8fcyz7/?mibextid=wwXIfr" className="text-indigo-200/65 transition hover:text-indigo-500">Facebook</a>
+              <a href="https://www.instagram.com/gowappily_infotech?igsh=YnA2MW41anhubjY2&utm_source=qr" className="text-indigo-200/65 transition hover:text-indigo-500">Instagram</a>
+              {/* <a href="https://linkedin.com" className="text-indigo-200/65 transition hover:text-indigo-500">LinkedIn</a> */}
+            </div>
+          </div>
         </div>
         {/* Footer Logo & Social */}
-        <div className="text-center  w-full">
+        <div className="text-center w-full">
           <div className="text-sm">
             <p className="py-2 text-indigo-200/65">
-              © {new Date().getFullYear()} GoWappily Technologies
+              © {new Date().getFullYear()} GoWappily Infotech
               <span className="text-gray-700"> · </span>
               <a
                 className="text-indigo-200/65 transition hover:text-indigo-500"

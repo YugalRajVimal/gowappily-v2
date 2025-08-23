@@ -14,18 +14,6 @@ import {
 export default function ServicesGoWappily() {
   const services = [
     {
-      title: "Hosting & Cloud Services",
-      icon: <Cloud className="w-8 h-8 text-indigo-400" />,
-      // illustration: HostingIllustration,
-      list: [
-        "Shared, Reseller & WordPress Hosting",
-        "VPS & Dedicated Servers",
-        "Cloud Storage Solutions",
-        "Domain & DNS Management",
-        "SSL Certificate Services",
-      ],
-    },
-    {
       title: "Development Services",
       icon: <Code2 className="w-8 h-8 text-indigo-400" />,
       // illustration: DevIllustration,
@@ -65,6 +53,19 @@ export default function ServicesGoWappily() {
       ],
     },
     {
+      title: "Hosting & Cloud Services",
+      icon: <Cloud className="w-8 h-8 text-indigo-400" />,
+      // illustration: HostingIllustration,
+      list: [
+        "Shared, Reseller & WordPress Hosting",
+        "VPS & Dedicated Servers",
+        "Cloud Storage Solutions",
+        "Domain & DNS Management",
+        "SSL Certificate Services",
+      ],
+    },
+
+    {
       title: "Creative & Branding",
       icon: <Brush className="w-8 h-8 text-indigo-400" />,
       // illustration: BrandingIllustration,
@@ -73,6 +74,7 @@ export default function ServicesGoWappily() {
         "Video Editing & Motion Graphics",
         "UI/UX Design",
         "Full Branding Kits",
+        "Video Editing & Motion Graphics ",
       ],
     },
     {
@@ -106,13 +108,13 @@ export default function ServicesGoWappily() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center mb-16">
           <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
-            GoWappily Technologies
+            GoWappily Infotech
           </h1>
           <p className="max-w-3xl mx-auto text-lg text-indigo-200/70">
-            GoWappily Technologies offers{" "}
-            <strong>45+ professional services</strong> in hosting, development,
-            marketing, branding, and business automation — empowering brands to
-            scale in today’s competitive market.
+            GoWappily Infotech offers <strong>45+ professional services</strong>{" "}
+            in hosting, development, marketing, branding, and business
+            automation — empowering brands to scale in today’s competitive
+            market.
           </p>
         </div>
 
@@ -154,7 +156,7 @@ export default function ServicesGoWappily() {
         <div className="mt-12 text-center">
           <a
             className="btn group mb-4 w-full sm:w-auto bg-linear-to-t from-indigo-600 to-indigo-500 text-white hover:bg-[length:100%_150%]"
-            href="#contact"
+            href="/contact-us"
           >
             <span className="relative inline-flex items-center">
               Get in Touch
@@ -165,7 +167,7 @@ export default function ServicesGoWappily() {
           </a>
           <a
             className="btn relative w-full sm:w-auto sm:ml-4 bg-linear-to-b from-gray-800 to-gray-800/60 text-gray-300 hover:bg-[length:100%_150%]"
-            href="#services"
+            href="/services"
           >
             Explore All Services
           </a>
