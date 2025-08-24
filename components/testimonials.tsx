@@ -4,31 +4,40 @@ import { useState } from "react";
 import useMasonry from "@/utils/useMasonry";
 import Image, { StaticImageData } from "next/image";
 
-const TestimonialImg01 = "/images/testimonial-01.jpg";
-const TestimonialImg02 = "/images/testimonial-02.jpg";
-const TestimonialImg03 = "/images/testimonial-03.jpg";
-const TestimonialImg04 = "/images/testimonial-04.jpg";
-const TestimonialImg05 = "/images/testimonial-05.jpg";
-const TestimonialImg06 = "/images/testimonial-06.jpg";
-const TestimonialImg07 = "/images/testimonial-07.jpg";
-const TestimonialImg08 = "/images/testimonial-08.jpg";
-const TestimonialImg09 = "/images/testimonial-09.jpg";
-const ClientImg01 = "/images/client-logo-01.svg";
-const ClientImg02 = "/images/client-logo-02.svg";
-const ClientImg03 = "/images/client-logo-03.svg";
-const ClientImg04 = "/images/client-logo-04.svg";
-const ClientImg05 = "/images/client-logo-05.svg";
-const ClientImg06 = "/images/client-logo-06.svg";
-const ClientImg07 = "/images/client-logo-07.svg";
-const ClientImg08 = "/images/client-logo-08.svg";
-const ClientImg09 = "/images/client-logo-09.svg";
+const ClientImg01 = "/clients/aasthaSolarEnergyLogo.jpeg";
+
+const ClientImg02 = "/clients/arbcLogo.jpg";
+
+const ClientImg03 = "/clients/azadShorthandLogo.webp";
+
+const ClientImg04 = "/clients/clenfayLogo.jpg";
+
+const ClientImg05 = "/clients/geetaFabsLogo.png";
+
+const ClientImg06 = "/clients/manglamMarketingLogo.jpeg";
+
+const ClientImg07 = "/clients/neConstructionLogo.jpeg";
+
+const ClientImg08 = "/clients/rjSolarLogo.jpg";
+
+const ClientImg09 = "/clients/thePrMediaLogo.svg";
+
+const TestimonialImg01 = "/images/client-logo-01.svg";
+const TestimonialImg02 = "/images/client-logo-02.svg";
+const TestimonialImg03 = "/images/client-logo-03.svg";
+const TestimonialImg04 = "/images/client-logo-04.svg";
+const TestimonialImg05 = "/images/client-logo-05.svg";
+const TestimonialImg06 = "/images/client-logo-06.svg";
+const TestimonialImg07 = "/images/client-logo-07.svg";
+const TestimonialImg08 = "/images/client-logo-08.svg";
+const TestimonialImg09 = "/images/client-logo-09.svg";
 
 const testimonials = [
   {
     img: TestimonialImg01,
     clientImg: ClientImg01,
-    name: "Rajesh K.",
-    company: "Tata Consultancy Services",
+    name: "Mr. Vineet",
+    company: "Aastha Solar Energy",
     content:
       "GoWappily Infotech transformed the way our teams collaborate across multiple geographies. Their cloud integration solutions have made our systems faster, more secure, and highly scalable.",
     categories: [1, 3, 5],
@@ -36,8 +45,8 @@ const testimonials = [
   {
     img: TestimonialImg02,
     clientImg: ClientImg02,
-    name: "Aisha M.",
-    company: "Siemens",
+    name: "Kanchan Shah",
+    company: "International Trade World",
     content:
       "The AI-driven automation solutions from GoWappily Infotech have helped us reduce operational costs by 40%. Their deep understanding of enterprise requirements is unmatched.",
     categories: [1, 2, 4],
@@ -45,8 +54,8 @@ const testimonials = [
   {
     img: TestimonialImg03,
     clientImg: ClientImg03,
-    name: "Michael L.",
-    company: "Rio Tinto",
+    name: "Azad singh yadav",
+    company: "Azad Shorthand",
     content:
       "Our digital transformation journey was stuck until we partnered with GoWappily Infotech. They streamlined workflows, integrated data pipelines, and boosted overall efficiency significantly.",
     categories: [1, 2, 5],
@@ -54,8 +63,8 @@ const testimonials = [
   {
     img: TestimonialImg04,
     clientImg: ClientImg04,
-    name: "Priya S.",
-    company: "Canon India",
+    name: "Shivam garg",
+    company: "CLENFLAY",
     content:
       "From advanced analytics to seamless ERP integration, core Technologies delivered beyond expectations. Their team truly understands enterprise-grade software development.",
     categories: [1, 4],
@@ -63,8 +72,8 @@ const testimonials = [
   {
     img: TestimonialImg05,
     clientImg: ClientImg05,
-    name: "Ethan W.",
-    company: "Cadbury International",
+    name: "Adarsh Gupta",
+    company: "Geeta Fabs",
     content:
       "GoWappily Infotech’ IoT and AI solutions have allowed us to optimize our supply chain in real time. It’s like having a control center that predicts and resolves issues instantly.",
     categories: [1, 3, 5],
@@ -72,8 +81,8 @@ const testimonials = [
   {
     img: TestimonialImg06,
     clientImg: ClientImg06,
-    name: "Laura P.",
-    company: "Maffell",
+    name: "Mr. Nishant",
+    company: "Manglam Marketing",
     content:
       "What impressed us most about GoWappily Infotech was their ability to integrate complex AI models into our existing systems without disrupting ongoing operations.",
     categories: [1, 3],
@@ -81,8 +90,8 @@ const testimonials = [
   {
     img: TestimonialImg07,
     clientImg: ClientImg07,
-    name: "Sandeep V.",
-    company: "Binance",
+    name: "Ejaj Alam",
+    company: "NE Construction",
     content:
       "GoWappily Infotech built our secure blockchain integration platform in record time. The performance and reliability have exceeded our highest expectations.",
     categories: [1, 2, 5],
@@ -90,8 +99,8 @@ const testimonials = [
   {
     img: TestimonialImg08,
     clientImg: ClientImg08,
-    name: "Jessica F.",
-    company: "Forbes Media",
+    name: "Mr. Joginder",
+    company: "RJ Solar Technologies",
     content:
       "Their data analytics dashboard is sleek, intuitive, and lightning-fast. GoWappily Infotech has made enterprise data insights accessible and actionable for our teams.",
     categories: [1, 4],
@@ -99,8 +108,8 @@ const testimonials = [
   {
     img: TestimonialImg09,
     clientImg: ClientImg09,
-    name: "Mark D.",
-    company: "Ray-Ban",
+    name: "Kapil poswal",
+    company: "The PR Media",
     content:
       "We were looking for a partner who could handle AI, cloud, and cybersecurity together — GoWappily Infotech delivered all of that in one unified solution.",
     categories: [1, 2],
@@ -285,19 +294,25 @@ export function Testimonial({
     >
       <div className="flex flex-col gap-4">
         <div>
-          <img src={testimonial.clientImg} height={36} alt="Client logo" />
+          <img
+            src={testimonial.clientImg}
+            height={36}
+            width={36}
+            alt="Client logo"
+            className="h-8 w-8 rounded-full bg-white"
+          />
         </div>
         <p className="text-indigo-200/65 before:content-['“'] after:content-['”']">
           {children}
         </p>
         <div className="flex items-center gap-3">
-          <img
-            className="inline-flex shrink-0 rounded-full"
+          {/* <img
+            className="inline-flex shrink-0 rounded-full "
             src={testimonial.img}
             width={36}
             height={36}
             alt={testimonial.name}
-          />
+          /> */}
           <div className="text-sm font-medium text-gray-200">
             <span>{testimonial.name}</span>
             <span className="text-gray-700"> - </span>

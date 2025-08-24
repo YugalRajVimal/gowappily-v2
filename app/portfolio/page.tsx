@@ -168,10 +168,15 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="py-12 sm:py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
+      <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
+          <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+            GoWappily Infotech
+          </span>
+        </div>
         {/* Heading */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-200 to-indigo-400">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-200 to-indigo-400">
             Our Portfolio
           </h1>
           <p className="text-base sm:text-lg text-indigo-200/70 mt-4 max-w-3xl mx-auto">
