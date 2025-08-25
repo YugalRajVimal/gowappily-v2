@@ -19,9 +19,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
         <div className="relative flex h-14 items-center  justify-between gap-3 rounded-2xl bg-gray-900/90 px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs overflow-hidden">
           {/* Logo */}
-          <div
-            className="flex items-center rounded-l-md text-xl font-serif font-bold text-indigo-500 bg-white "
-          >
+          <div className="flex items-center rounded-l-md text-xl font-serif font-bold text-indigo-500 bg-white ">
             <Logo />
 
             {/* GoWappily Infotech */}
@@ -37,14 +35,14 @@ export default function Header() {
                 Home
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
                 href="/about-us"
                 className="btn-sm relative py-[5px] text-gray-300 hover:text-gray-200 hover:scale-[1.05]"
               >
                 About Us
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link
                 href="/services"
@@ -61,14 +59,14 @@ export default function Header() {
                 Portfolio
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
                 href="/contact-us"
                 className="btn-sm relative py-[5px] text-gray-300 hover:text-gray-200 hover:scale-[1.05]"
               >
                 Contact Us
               </Link>
-            </li> */}
+            </li>
             {/* {isCustomerAuthenticated ? (
               <li>
                 <div
@@ -117,6 +115,14 @@ export default function Header() {
             </Link>
 
             <Link
+              href="/about-us"
+              className="text-gray-300 hover:text-white"
+              onClick={handleLinkClick}
+            >
+              About Us
+            </Link>
+
+            <Link
               href="/services"
               className="text-gray-300 hover:text-white"
               onClick={handleLinkClick}
@@ -129,6 +135,13 @@ export default function Header() {
               onClick={handleLinkClick}
             >
               Portfolio
+            </Link>
+            <Link
+              href="/contact-us"
+              className="text-gray-300 hover:text-white"
+              onClick={handleLinkClick}
+            >
+              Contact Us
             </Link>
             {/* <Link href="/signin" className="text-gray-300 hover:text-white">
               Sign In

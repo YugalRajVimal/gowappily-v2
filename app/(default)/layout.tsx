@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Footer from "@/components/ui/footer";
+
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
@@ -27,7 +27,6 @@ export default function DefaultLayout({
     <>
       <main className="relative flex grow flex-col">{children}</main>
 
-      <Footer />
       <div className="fixed flex h-[200px] items-end  justify-between px-10 py-4 w-full bottom-[20px] left-0 ">
         <a href={`tel:+918800592770`} className="">
           <FaPhoneAlt className="text-4xl text-white bg-black p-2   rounded-full" />

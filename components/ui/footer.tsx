@@ -95,10 +95,14 @@ export default function Footer() {
             <p className="text-sm text-indigo-200/65">
               Address: G-13,Sector 6 Noida
             </p>
-            <p className="text-sm text-indigo-200/65">Phone: +91 6398960435</p>
-            <p className="text-sm text-indigo-200/65">Phone: +91 8235490591</p>
-            <p className="text-sm text-indigo-200/65">
-              Email: info@gowappily.com
+            <p className="text-sm text-indigo-200/65 transition hover:text-indigo-500">
+              Phone: <a href="tel:+916398960435" className="hover:underline">+91 6398960435</a>
+            </p>
+            <p className="text-sm text-indigo-200/65 transition hover:text-indigo-500">
+              Phone: <a href="tel:+918800592770" className="hover:underline">+91 8800592770</a>
+            </p>
+            <p className="text-sm text-indigo-200/65 transition hover:text-indigo-500">
+              Email: <a href="mailto:info@gowappily.com" className="hover:underline">info@gowappily.com</a>
             </p>
             <div className="flex space-x-2">
               <a
