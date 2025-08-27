@@ -122,11 +122,11 @@ const AboutUs = () => {
             {/** CEO profile */}
             <div className="relative z-10 group opacity-100 transform-none">
               <div className="relative overflow-hidden h-full">
-                <div className="relative  overflow-hidden">
+                <div className="relative overflow-hidden">
                   <img
-                    src=""
+                    src="/ceo.jpeg"
                     alt=""
-                    className=" h-1/2 aspect-[1/1] rounded-full object-cover transition-all duration-500"
+                    className="w-full aspect-[1/1] rounded-full object-cover object-top transition-all duration-500"
                   />
 
                   <div className="absolute inset-0 bg-black/90 backdrop-blur-sm flex flex-col justify-center items-center transition-all duration-300 p-8 opacity-0 md:group-hover:opacity-100">
