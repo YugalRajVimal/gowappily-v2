@@ -10,15 +10,7 @@ const testimonials = [
     company: "Consumer Haat",
     content:
       "Partnering with GoWappily Infotech completely transformed our online shopping experience. From smooth performance to secure payments and an elegant product showcase — they built an eCommerce platform that truly reflects our brand. Sales and engagement have doubled since launch!",
-    categories: [1, 3, 5],
-  },
-  {
-    clientImg: "/clients/aasthaSolarEnergyLogo.jpeg",
-    name: "Mr. Vineet",
-    company: "Aastha Solar Energy",
-    content:
-      "GoWappily Infotech transformed the way our teams collaborate across multiple geographies. Their cloud integration solutions have made our systems faster, more secure, and highly scalable.",
-    categories: [1, 3, 5],
+    categories: [1, 2, 3], // eCommerce
   },
   {
     clientImg: "/clients/arbcLogo.jpg",
@@ -26,7 +18,7 @@ const testimonials = [
     company: "International Trade World",
     content:
       "The AI-driven automation solutions from GoWappily Infotech have helped us reduce operational costs by 40%. Their deep understanding of enterprise requirements is unmatched.",
-    categories: [1, 2, 4],
+    categories: [1, 2, 3], // eCommerce
   },
   {
     clientImg: "/clients/infotechSolutions.png",
@@ -35,7 +27,7 @@ const testimonials = [
     company: "Infotech Solutions",
     content:
       "Infotech Solutions transformed our IT infrastructure and helped us streamline operations across all locations. Their team is responsive, knowledgeable, and delivered scalable solutions tailored to our business needs.",
-    categories: [1, 2, 3],
+    categories: [1, 2, 4], // Web Apps / Enterprise
   },
   {
     clientImg: "/clients/ksJobGlobal.svg",
@@ -44,7 +36,7 @@ const testimonials = [
     company: "KS. Job Global",
     content:
       "KS. Job Global helped us connect with skilled professionals across hospitality, driving, and healthcare sectors efficiently. Their platform is reliable, inclusive, and has significantly improved our workforce management and growth opportunities.",
-    categories: [1, 3, 5],
+    categories: [1, 2], // Web Apps (Job Portal)
   },
   {
     clientImg: "/clients/nextGridSolarEnergy.webp",
@@ -53,7 +45,7 @@ const testimonials = [
     company: "NextGrid Solar Energy",
     content:
       "NextGrid Solar Energy provided us with a reliable and sustainable solar power solution for our commercial setup. Their team was professional, efficient, and ensured a smooth installation process. Highly recommended for clean energy solutions.",
-    categories: [2, 4, 5],
+    categories: [1, 2, 5], // Solar / IoT
   },
   {
     clientImg: "/clients/clenfayLogo.jpg",
@@ -61,7 +53,7 @@ const testimonials = [
     company: "CLENFLAY",
     content:
       "From advanced analytics to seamless ERP integration, core Technologies delivered beyond expectations. Their team truly understands enterprise-grade software development.",
-    categories: [1, 4],
+    categories: [1, 2, 3, 4], // Enterprise / Tech
   },
   {
     clientImg: "/clients/azadShorthandLogo.webp",
@@ -69,7 +61,7 @@ const testimonials = [
     company: "Azad Shorthand",
     content:
       "Our digital transformation journey was stuck until we partnered with GoWappily Infotech. They streamlined workflows, integrated data pipelines, and boosted overall efficiency significantly.",
-    categories: [1, 2, 5],
+    categories: [1], // Web Apps (Mobile / App)
   },
   {
     clientImg: "/clients/manglamMarketingLogo.jpeg",
@@ -77,7 +69,7 @@ const testimonials = [
     company: "Manglam Marketing",
     content:
       "What impressed us most about GoWappily Infotech was their ability to integrate complex AI models into our existing systems without disrupting ongoing operations.",
-    categories: [1, 3],
+    categories: [1, 2, 4], // Enterprise / Marketing
   },
   {
     clientImg: "/clients/geetaFabsLogo.png",
@@ -85,7 +77,15 @@ const testimonials = [
     company: "Geeta Fabs",
     content:
       "GoWappily Infotech’ IoT and AI solutions have allowed us to optimize our supply chain in real time. It’s like having a control center that predicts and resolves issues instantly.",
-    categories: [1, 3, 5],
+    categories: [1, 2, 4], // Enterprise / Manufacturing
+  },
+  {
+    clientImg: "/clients/aasthaSolarEnergyLogo.jpeg",
+    name: "Mr. Vineet",
+    company: "Aastha Solar Energy",
+    content:
+      "GoWappily Infotech transformed the way our teams collaborate across multiple geographies. Their cloud integration solutions have made our systems faster, more secure, and highly scalable.",
+    categories: [1, 2, 5], // Solar / IoT
   },
   {
     clientImg: "/clients/neConstructionLogo.jpeg",
@@ -93,7 +93,7 @@ const testimonials = [
     company: "NE Construction",
     content:
       "GoWappily Infotech built our secure blockchain integration platform in record time. The performance and reliability have exceeded our highest expectations.",
-    categories: [1, 2, 5],
+    categories: [4], // Enterprise / Construction
   },
   {
     clientImg: "/clients/rjSolarLogo.jpg",
@@ -101,7 +101,7 @@ const testimonials = [
     company: "RJ Solar Technologies",
     content:
       "Their data analytics dashboard is sleek, intuitive, and lightning-fast. GoWappily Infotech has made enterprise data insights accessible and actionable for our teams.",
-    categories: [1, 4],
+    categories: [1, 2, 5], // Solar / IoT
   },
   {
     clientImg: "/clients/thePrMediaLogo.svg",
@@ -109,9 +109,8 @@ const testimonials = [
     company: "The PR Media",
     content:
       "We were looking for a partner who could handle AI, cloud, and cybersecurity together — GoWappily Infotech delivered all of that in one unified solution.",
-    categories: [1, 2],
+    categories: [1, 2], // Web Apps / Online Courses
   },
- 
 ];
 
 const categoriesList = [
