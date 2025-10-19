@@ -26,24 +26,50 @@ const ContactUs = () => {
       return;
     }
 
-    // Simple email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       alert("Please enter a valid email address.");
       return;
     }
 
-    // Simple phone number validation (assuming it should be numeric and of a certain length)
     if (!/^\d+$/.test(phone) || phone.length < 10) {
       alert("Please enter a valid phone number.");
       return;
     }
-    e.preventDefault();
-    const whatsappMessage = `I would like to connect with you. This is my contact information:\n\nName: ${fullName}\nCompany: ${company}\nEmail: ${email}\nPhone: ${countryCode} ${phone}\nMessage: ${message}`;
-    const whatsappUrl = `https://wa.me/+918800592770?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-    window.open(whatsappUrl, "_blank");
+
+    try {
+      const response = await fetch("https://api.gowappily.com/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName,
+          email,
+          countryCode,
+          phone,
+          company,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      alert(
+        "Message sent successfully! A confirmation email has been sent to you."
+      );
+
+      // Reset form fields
+      setFullName("");
+      setEmail("");
+      setCountryCode("India (+91)");
+      setPhone("");
+      setCompany("");
+      setMessage("");
+    } catch (err) {
+      console.error(err);
+      alert("There was an error sending your message. Please try again later.");
+    }
   };
 
   const contactInfo = {
