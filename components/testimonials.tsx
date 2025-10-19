@@ -6,7 +6,7 @@ import useMasonry from "@/utils/useMasonry";
 const testimonials = [
   {
     clientImg: "/clients/consumerHaat.jpg",
-    name: "Kanchan Shah",
+    name: "Anita Sharma",
     company: "Consumer Haat",
     content:
       "Partnering with GoWappily Infotech completely transformed our online shopping experience. From smooth performance to secure payments and an elegant product showcase — they built an eCommerce platform that truly reflects our brand. Sales and engagement have doubled since launch!",
@@ -23,7 +23,7 @@ const testimonials = [
   {
     clientImg: "/clients/infotechSolutions.png",
     link: "https://infotechsystems.net.in/",
-    name: "Ravi Sharma",
+    name: "Peter Baker",
     company: "Infotech Solutions",
     content:
       "Infotech Solutions transformed our IT infrastructure and helped us streamline operations across all locations. Their team is responsive, knowledgeable, and delivered scalable solutions tailored to our business needs.",
@@ -41,7 +41,7 @@ const testimonials = [
   {
     clientImg: "/clients/nextGridSolarEnergy.webp",
     link: "https://nextgridsolar.com/",
-    name: "Ravi Gupta",
+    name: "Peter Baker",
     company: "NextGrid Solar Energy",
     content:
       "NextGrid Solar Energy provided us with a reliable and sustainable solar power solution for our commercial setup. Their team was professional, efficient, and ensured a smooth installation process. Highly recommended for clean energy solutions.",
