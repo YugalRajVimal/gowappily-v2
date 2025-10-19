@@ -83,9 +83,9 @@ const AboutUs = () => {
               className="w-full h-full object-cover rounded-lg shadow-text border bg-white"
             />
 
-            <div className="absolute -bottom-20 md:-bottom-20 -right-4 w-36 h-36 md:w-56 md:h-56 bg-black border border-danger/40 rounded-lg p-4 md:p-6 flex items-center justify-center">
-              <div className="text-center bg-black">
-                <p className="text-3xl md:text-5xl font-bold font-montserrat text-indigo-500 shadow-text">
+            <div className="absolute z-50 -bottom-20 md:-bottom-20 -right-4 w-36 h-36 md:w-56 md:h-56 bg-[#513ef7] border border-danger/40 rounded-lg p-4 md:p-6 flex items-center justify-center">
+              <div className="text-center">
+                <p className="text-3xl md:text-5xl font-bold font-montserrat text-white shadow-text">
                   5+
                 </p>
 

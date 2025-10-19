@@ -98,7 +98,8 @@ export default function HeroHome() {
               className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl"
               data-aos="fade-up"
             >
-              Driving Growth Through Next-Gen Digital Solutions
+              {/* Driving Growth Through Next-Gen Digital Solutions */}
+              Powering Business Growth with Smart Digital Solutions
             </h1>
             <div className="mx-auto max-w-4xl">
               <p
@@ -110,7 +111,7 @@ export default function HeroHome() {
                 with our extensive range of professional services. Experience
                 the future of technology with our stunning 3D animations and
                 dark-themed design. */}
-                GoWappily Infotech is a comprehensive digital technology partner
+                {/* GoWappily Infotech is a comprehensive digital technology partner
                 delivering <strong>45+ specialized services</strong> under one
                 platform. From software development, web hosting, and cloud
                 infrastructure to digital marketing, branding, and business
@@ -118,7 +119,15 @@ export default function HeroHome() {
                 and high-impact solutions. Our skilled team combines innovation
                 with technology to craft customized strategies that empower
                 brands to grow, expand, and thrive in today’s dynamic digital
-                landscape. market.
+                landscape. market. */}
+                GoWappily Infotech is your trusted digital partner, delivering
+                expert solutions in app development, web development, social
+                media marketing, performance marketing, SEO, and CRM/ERP
+                systems. We combine creativity, strategy, and technology to
+                craft tailored digital experiences that drive visibility,
+                engagement, and growth. Our goal is to help businesses scale and
+                succeed in today’s competitive digital landscape through
+                results-driven, smart, and scalable solutions.
               </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay={400}>

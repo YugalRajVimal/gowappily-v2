@@ -7,6 +7,7 @@ import Header from "@/components/ui/header";
 import { CustomerAuthProvider } from "@/context/CustomerAuthContext";
 import CustomerProtectedRoute from "@/ProtectedRoutes/CustomerProtectedRoute";
 import Footer from "@/components/ui/footer";
+import FireworksCanvas from "@/components/AddOns/DiwaliFestiwal/FireworkCanvas";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
       >
+        <FireworksCanvas />
         <CustomerAuthProvider>
           <CustomerProtectedRoute>
             <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">

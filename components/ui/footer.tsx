@@ -1,3 +1,4 @@
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Logo from "./logo";
 import Image from "next/image";
 
@@ -40,13 +41,54 @@ export default function Footer() {
           <div className="space-y-2 flex-1">
             <h3 className="text-sm font-medium text-gray-200">Services</h3>
             <ul className="space-y-2 text-sm text-indigo-200/65">
-              <li>Hosting & Cloud Services</li>
-              <li>Development Services</li>
-              <li>Marketing & SEO</li>
-              <li>Meta Ecosystem</li>
-              <li>Creative & Branding</li>
-              <li>Cyber & Business Support</li>
-              <li>Legal & Business Services</li>
+              <li>
+                <a
+                  href="/services"
+                  className="transition hover:text-indigo-500"
+                >
+                  Web Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  className="transition hover:text-indigo-500"
+                >
+                  Mobile App Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  className="transition hover:text-indigo-500"
+                >
+                  SEO Optimization
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  className="transition hover:text-indigo-500"
+                >
+                  Social Media Marketing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  className="transition hover:text-indigo-500"
+                >
+                  Performance Marketing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  className="transition hover:text-indigo-500"
+                >
+                  CRM & ERP Solutions
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -62,14 +104,6 @@ export default function Footer() {
                   Home
                 </a>
               </li>
-              {/* <li>
-                <a
-                  href="#about"
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                >
-                  About Us
-                </a>
-              </li> */}
               <li>
                 <a
                   href="/services"
@@ -86,6 +120,22 @@ export default function Footer() {
                   Our Portfolio
                 </a>
               </li>
+              <li>
+                <a
+                  href="/about-us"
+                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact-us"
+                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                >
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -96,28 +146,52 @@ export default function Footer() {
               Address: G-13,Sector 6 Noida
             </p>
             <p className="text-sm text-indigo-200/65 transition hover:text-indigo-500">
-              Phone: <a href="tel:+916398960435" className="hover:underline">+91 6398960435</a>
+              Phone:{" "}
+              <a href="tel:+916398960435" className="hover:underline">
+                +91 6398960435
+              </a>
             </p>
             <p className="text-sm text-indigo-200/65 transition hover:text-indigo-500">
-              Phone: <a href="tel:+918800592770" className="hover:underline">+91 8800592770</a>
+              Phone:{" "}
+              <a href="tel:+918800592770" className="hover:underline">
+                +91 8800592770
+              </a>
             </p>
             <p className="text-sm text-indigo-200/65 transition hover:text-indigo-500">
-              Email: <a href="mailto:info@gowappily.com" className="hover:underline">info@gowappily.com</a>
+              Email:{" "}
+              <a href="mailto:info@gowappily.com" className="hover:underline">
+                info@gowappily.com
+              </a>
             </p>
-            <div className="flex space-x-2">
+            <div className="flex space-x-4 mt-4">
               <a
                 href="https://www.facebook.com/share/1JDm8fcyz7/?mibextid=wwXIfr"
                 className="text-indigo-200/65 transition hover:text-indigo-500"
+                aria-label="Facebook"
               >
-                Facebook
+                <FaFacebook className="h-6 w-6" />
               </a>
               <a
                 href="https://www.instagram.com/gowappily_infotech?igsh=YnA2MW41anhubjY2&utm_source=qr"
                 className="text-indigo-200/65 transition hover:text-indigo-500"
+                aria-label="Instagram"
               >
-                Instagram
+                <FaInstagram className="h-6 w-6" />
               </a>
-              {/* <a href="https://linkedin.com" className="text-indigo-200/65 transition hover:text-indigo-500">LinkedIn</a> */}
+              <a
+                href="https://twitter.com/gowappily"
+                className="text-indigo-200/65 transition hover:text-indigo-500"
+                aria-label="Twitter"
+              >
+                <FaTwitter className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/gowappily-infotech"
+                className="text-indigo-200/65 transition hover:text-indigo-500"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>

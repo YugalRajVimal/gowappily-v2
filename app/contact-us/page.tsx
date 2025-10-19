@@ -40,7 +40,9 @@ const ContactUs = () => {
     }
     e.preventDefault();
     const whatsappMessage = `I would like to connect with you. This is my contact information:\n\nName: ${fullName}\nCompany: ${company}\nEmail: ${email}\nPhone: ${countryCode} ${phone}\nMessage: ${message}`;
-    const whatsappUrl = `https://wa.me/+918800592770?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/+918800592770?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -268,11 +270,11 @@ const ContactUs = () => {
                     Working Hours
                   </h4>
                   <p className="text-gray-light font-roboto">
-                    Monday to Friday: 8:00 AM - 11:00 PM
+                    Monday to Friday: 10:00 AM - 10:00 PM
                     <br />
-                    Saturday: 9:00 AM - 11:00 PM
+                    Saturday: Off
                     <br />
-                    Sunday: 9:00 AM - 11:00 PM
+                    Sunday: Off
                   </p>
                 </div>
               </div>

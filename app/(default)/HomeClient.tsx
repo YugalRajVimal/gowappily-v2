@@ -17,6 +17,7 @@ import TerminalPreloader from "@/components/ui/terminal-loader";
 import Head from "next/head";
 
 import { useCustomerAuth } from "@/context/CustomerAuthContext";
+import TrustedBy from "@/components/TrustedBy";
 
 export default function HomeClient() {
   const [loading, setLoading] = useState(true);
@@ -38,6 +39,7 @@ export default function HomeClient() {
       <PageIllustration />
       <Hero />
       <Workflows />
+      <TrustedBy />
       <Services />
       {/* <PlansSection /> */}
       <BenefitsSection />

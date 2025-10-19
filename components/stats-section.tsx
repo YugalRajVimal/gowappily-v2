@@ -26,7 +26,7 @@ export default function StatsSection() {
     },
     {
       icon: <Clock className="w-8 h-8 text-indigo-400" />,
-      value: "99.9%",
+      value: "99%",
       label: "Uptime Guarantee",
     },
     {
