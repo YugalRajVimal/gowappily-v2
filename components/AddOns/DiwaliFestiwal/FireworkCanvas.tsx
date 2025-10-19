@@ -458,12 +458,12 @@ const FireworksCanvas: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="relative">
       {/* Fireworks Canvas - now on top */}
       <canvas
         ref={canvasRef}
         onClick={handleClick}
-        className={`fixed z-60 top-0 left-0 w-full h-full pointer-events-auto ${
+        className={`fixed z-40 top-0 left-0 w-full h-full pointer-events-auto ${
           !showWishes && "hidden"
         }`}
         style={{
@@ -472,15 +472,24 @@ const FireworksCanvas: React.FC = () => {
           animation: "fadeOut 10s ease-out forwards",
         }}
       />
+      {/* Close Button */}
+      {showWishes && (
+        <button
+          onClick={() => setShowWishes(false)}
+          className="fixed z-60 top-5 right-5 rounded-full bg-red-600 px-4 py-2 font-semibold text-white hover:bg-red-700 transition"
+        >
+          Close
+        </button>
+      )}
 
       {/* Slight background dimming behind the text */}
       {showWishes && (
         <div
-          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm animate-fadeOut"
+          className="fixed  inset-0 z-30 bg-black/40 backdrop-blur-sm animate-fadeOut"
           style={{
             animation: "fadeOut 10s ease-out forwards",
           }}
-        />
+        ></div>
       )}
 
       {/* Text - below fireworks but still glowing */}
@@ -528,7 +537,7 @@ const FireworksCanvas: React.FC = () => {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 };
 
