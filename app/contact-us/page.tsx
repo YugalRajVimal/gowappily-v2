@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 import {
   MdOutlineMail,
@@ -17,23 +16,42 @@ const ContactUs = () => {
   const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
 
+  // Alert state
+  const [alert, setAlert] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+
+  // Auto-hide alert after 3 seconds
+  useEffect(() => {
+    if (alert) {
+      const timer = setTimeout(() => setAlert(null), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [alert]);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Validate fields
     if (!fullName || !email || !phone || !company || !message) {
-      alert("Please fill in all fields.");
+      setAlert({ type: "error", message: "Please fill in all fields." });
       return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      alert("Please enter a valid email address.");
+      setAlert({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
       return;
     }
 
     if (!/^\d+$/.test(phone) || phone.length < 10) {
-      alert("Please enter a valid phone number.");
+      setAlert({
+        type: "error",
+        message: "Please enter a valid phone number.",
+      });
       return;
     }
 
@@ -51,15 +69,14 @@ const ContactUs = () => {
         }),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
+      if (!response.ok) throw new Error("Failed to send message");
 
-      alert(
-        "Message sent successfully! A confirmation email has been sent to you."
-      );
+      setAlert({
+        type: "success",
+        message: "Message sent successfully! Confirmation email sent.",
+      });
 
-      // Reset form fields
+      // Reset fields
       setFullName("");
       setEmail("");
       setCountryCode("India (+91)");
@@ -68,7 +85,10 @@ const ContactUs = () => {
       setMessage("");
     } catch (err) {
       console.error(err);
-      alert("There was an error sending your message. Please try again later.");
+      setAlert({
+        type: "error",
+        message: "There was an error sending your message.",
+      });
     }
   };
 
@@ -82,7 +102,20 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="py-16 relative">
+      {/* Custom Alert */}
+      {alert && (
+        <div
+          className={`fixed top-5 right-5 z-50 px-6 py-4 rounded-lg shadow-lg transition-transform transform ${
+            alert.type === "success"
+              ? "bg-green-600 text-white"
+              : "bg-red-600 text-white"
+          }`}
+        >
+          {alert.message}
+        </div>
+      )}
+      {/* <section id="about" className="py-16"> */}
       <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
           <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
