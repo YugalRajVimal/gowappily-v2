@@ -32,7 +32,7 @@ const testimonials = [
   {
     clientImg: "/clients/ksJobGlobal.svg",
     link: "https://ksjobglobal.com/",
-    name: "Anil Mehta",
+    name: "Anurag Sharma",
     company: "KS. Job Global",
     content:
       "KS. Job Global helped us connect with skilled professionals across hospitality, driving, and healthcare sectors efficiently. Their platform is reliable, inclusive, and has significantly improved our workforce management and growth opportunities.",
