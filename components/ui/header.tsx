@@ -25,7 +25,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="z-30 mt-2 w-full md:mt-5 overflow-hidden">
+    <header className="z-30 fixed top-0 mt-2  w-screen max-h-[10vh] h-full md:my-5 ">
       {/* Offer Pop Up */}
       {showOfferPopup && (
         <div
@@ -42,7 +42,7 @@ export default function Header() {
           </p>
           <button
             onClick={() => setShowOfferPopup(false)}
-            className="text-white hover:text-gray-200 transition-colors flex-shrink-0"
+            className="text-white hover:text-gray-800 transition-colors flex-shrink-0"
             aria-label="Close offer"
           >
             <X size={20} />
@@ -50,10 +50,10 @@ export default function Header() {
         </div>
       )}
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
-        <div className="relative flex h-14 items-center  justify-between gap-3 rounded-2xl bg-gray-900/90 px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs overflow-hidden">
+      <div className="mx-auto px-4   sm:px-6 h-full max-h-[10vh] ">
+        <div className="relative flex h-20 py-2 items-center overflow-hidden  justify-between gap-3 rounded-2xl bg-white px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs overflow-hidden">
           {/* Logo */}
-          <div className="flex items-center rounded-l-md text-xl font-serif font-bold text-indigo-500 bg-white ">
+          <div className="flex items-center h-full overflow-hidden rounded-l-md text-xl font-serif font-bold text-indigo-500 bg-white ">
             <Logo />
 
             {/* GoWappily Infotech */}
@@ -64,7 +64,7 @@ export default function Header() {
             <li>
               <Link
                 href="/"
-                className="btn-sm relative py-[5px] text-gray-300 hover:text-gray-200 hover:scale-[1.05]"
+                className="btn-sm text-base relative py-[5px] text-gray-900 hover:text-gray-800 hover:scale-[1.05]"
               >
                 Home
               </Link>
@@ -72,7 +72,7 @@ export default function Header() {
             <li>
               <Link
                 href="/services"
-                className="btn-sm relative py-[5px] text-gray-300 hover:text-gray-200 hover:scale-[1.05]"
+                className="btn-sm text-base relative py-[5px] text-gray-900 hover:text-gray-800 hover:scale-[1.05]"
               >
                 Services
               </Link>
@@ -80,7 +80,7 @@ export default function Header() {
             <li>
               <Link
                 href="/portfolio"
-                className="btn-sm relative py-[5px] text-gray-300 hover:text-gray-200 hover:scale-[1.05]"
+                className="btn-sm text-base relative py-[5px] text-gray-900 hover:text-gray-800 hover:scale-[1.05]"
               >
                 Portfolio
               </Link>
@@ -88,7 +88,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about-us"
-                className="btn-sm relative py-[5px] text-gray-300 hover:text-gray-200 hover:scale-[1.05]"
+                className="btn-sm text-base relative py-[5px] text-gray-900 hover:text-gray-800 hover:scale-[1.05]"
               >
                 About Us
               </Link>
@@ -97,7 +97,7 @@ export default function Header() {
             <li>
               <Link
                 href="/contact-us"
-                className="btn-sm relative py-[5px] text-gray-300 hover:text-gray-200 hover:scale-[1.05]"
+                className="btn-sm text-base relative py-[5px] text-gray-900 hover:text-gray-800 hover:scale-[1.05]"
               >
                 Contact Us
               </Link>
@@ -106,7 +106,7 @@ export default function Header() {
               <li>
                 <div
                   onClick={() => logout()}
-                  className="btn-sm relative bg-linear-to-b from-gray-800 to-gray-800/60 py-[5px] text-gray-300 hover:bg-[length:100%_150%]"
+                  className="btn-sm text-base relative bg-linear-to-b from-gray-800 to-gray-800/60 py-[5px] text-gray-900 hover:bg-[length:100%_150%]"
                 >
                   Logout
                 </div>
@@ -116,7 +116,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/signin"
-                    className="btn-sm relative bg-linear-to-b from-gray-800 to-gray-800/60 py-[5px] text-gray-300 hover:bg-[length:100%_150%]"
+                    className="btn-sm text-base relative bg-linear-to-b from-gray-800 to-gray-800/60 py-[5px] text-gray-900 hover:bg-[length:100%_150%]"
                   >
                     Sign In
                   </Link>
@@ -124,7 +124,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/signup"
-                    className="btn-sm bg-linear-to-t from-indigo-600 to-indigo-500 py-[5px] text-white shadow hover:bg-[length:100%_150%]"
+                    className="btn-sm text-base bg-linear-to-t from-indigo-600 to-indigo-500 py-[5px] text-white shadow hover:bg-[length:100%_150%]"
                   >
                     Register
                   </Link>
@@ -135,7 +135,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-gray-300 hover:text-white"
+            className="md:hidden text-gray-900 hover:text-white"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -144,21 +144,21 @@ export default function Header() {
 
         {/* Mobile dropdown */}
         {mobileOpen && (
-          <div className="mt-2 flex flex-col gap-3 rounded-xl bg-gray-900/95 p-4 md:hidden transition-all duration-300">
-            <Link href="/" className="text-gray-300 hover:text-white">
+          <div className="mt-2 flex flex-col gap-3 rounded-xl bg-gray-200/95 p-4 md:hidden transition-all duration-300">
+            <Link href="/" className="text-gray-900 hover:text-white">
               Home
             </Link>
 
             <Link
               href="/services"
-              className="text-gray-300 hover:text-white"
+              className="text-gray-900 hover:text-white"
               onClick={handleLinkClick}
             >
               Services
             </Link>
             <Link
               href="/portfolio"
-              className="text-gray-300 hover:text-white"
+              className="text-gray-900 hover:text-white"
               onClick={handleLinkClick}
             >
               Portfolio
@@ -166,7 +166,7 @@ export default function Header() {
 
             <Link
               href="/about-us"
-              className="text-gray-300 hover:text-white"
+              className="text-gray-900 hover:text-white"
               onClick={handleLinkClick}
             >
               About Us
@@ -174,12 +174,12 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className="text-gray-300 hover:text-white"
+              className="text-gray-900 hover:text-white"
               onClick={handleLinkClick}
             >
               Contact Us
             </Link>
-            {/* <Link href="/signin" className="text-gray-300 hover:text-white">
+            {/* <Link href="/signin" className="text-gray-900 hover:text-white">
               Sign In
             </Link>
             <Link

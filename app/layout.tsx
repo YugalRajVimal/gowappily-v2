@@ -60,7 +60,7 @@ export default function RootLayout({
         {/* <FireworksCanvas /> */}
         <CustomerAuthProvider>
           <CustomerProtectedRoute>
-            <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+            <div className="flex min-h-screen pt-[10vh] flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
               <Header />
               {children}
               <Footer />
