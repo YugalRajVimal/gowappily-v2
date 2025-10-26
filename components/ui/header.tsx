@@ -25,9 +25,9 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="z-30 fixed top-0 mt-2  w-screen max-h-[10vh] h-full md:my-5 ">
+    <header className="z-30 fixed top-0  w-screen max-h-[10vh] h-full  ">
       {/* Offer Pop Up */}
-      {showOfferPopup && (
+      {/* {showOfferPopup && (
         <div
           className="fixed top-20 left-1/2 -translate-x-1/2 z-50 
               max-w-xs sm:max-w-md w-[calc(100%-2rem)] 
@@ -48,10 +48,10 @@ export default function Header() {
             <X size={20} />
           </button>
         </div>
-      )}
+      )} */}
 
-      <div className="mx-auto px-4   sm:px-6 h-full max-h-[10vh] ">
-        <div className="relative flex h-20 py-2 items-center overflow-hidden  justify-between gap-3 rounded-2xl bg-white px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs overflow-hidden">
+      <div className="  h-full max-h-[10vh] ">
+        <div className="relative flex h-20 py-1 items-center overflow-hidden  justify-between gap-3  bg-white px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs overflow-hidden">
           {/* Logo */}
           <div className="flex items-center h-full overflow-hidden rounded-l-md text-xl font-serif font-bold text-indigo-500 bg-white ">
             <Logo />
