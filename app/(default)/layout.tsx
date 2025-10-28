@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { useTheme } from "../ThemeContext";
 
 export default function DefaultLayout({
   children,
@@ -22,9 +23,13 @@ export default function DefaultLayout({
     });
   });
 
+  const { darkMode, toggleTheme } = useTheme();
+
+  
+
   return (
     <>
-      <main className="relative flex grow flex-col">{children}</main>
+      <main className={`relative flex grow flex-col ${darkMode ? "bg-gray-950 text-gray-100" : "bg-white text-gray-900 "} `}>{children}</main>
 
       <div className="fixed z-50 flex h-[200px] items-end  justify-between px-10 py-4 w-full bottom-[20px] left-0 ">
         <a href={`tel:+916398960435`} className="">

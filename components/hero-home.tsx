@@ -3,11 +3,15 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useTheme } from "@/app/ThemeContext";
+
 
 gsap.registerPlugin(useGSAP);
 
 export default function HeroHome() {
   const containerRef = useRef(null);
+
+  const { darkMode } = useTheme();
 
   useGSAP(
     () => {
@@ -31,21 +35,31 @@ export default function HeroHome() {
 
   return (
     <section ref={containerRef}>
-      <div className="relative w-full h-[30vh]">
+      <div className="relative w-full h-[20vh] md:h-[30vh]">
         <video
           autoPlay
           loop
           muted
-          className="h-full w-full object-cover opacity-40"
+          className={`h-full w-full object-cover ${darkMode&&"opacity-40"}`}
         >
           <source src="/vdo.mp4" type="video/mp4" />
         </video>
         <div className="absolute h-full text-center w-full bg-[#070c1c]/50 left-0 top-0 flex justify-center items-center">
           <div
             id="welcome-heading"
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-serif font-semibold text-transparent py-4"
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-[gradient_6s_linear_infinite] 
+
+     
+            bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))]
+
+            
+            
+            bg-[length:200%_auto] 
+            bg-clip-text font-serif 
+            font-semibold 
+            text-transparent py-4`}
           >
-            <span className="letter">W</span>
+            {/* <span className="letter">W</span>
             <span className="letter">e</span>
             <span className="letter">l</span>
             <span className="letter">c</span>
@@ -55,7 +69,7 @@ export default function HeroHome() {
             <span className="letter"> </span>
             <span className="letter">t</span>
             <span className="letter">o</span>
-            <span className="letter"> </span>
+            <span className="letter"> </span> */}
             <span className="letter">G</span>
             <span className="letter">o</span>
             <span className="letter">W</span>
@@ -79,7 +93,7 @@ export default function HeroHome() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-12 mb:pt-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
         {/* <ModalVideo
           thumb={VideoThumb}
           thumbWidth={1104}
@@ -95,7 +109,13 @@ export default function HeroHome() {
           {/* Section header */}
           <div className=" text-center ">
             <h1
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl"
+              className={`animate-[gradient_6s_linear_infinite] 
+               ${
+                 darkMode
+                   ? "bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))]"
+                   : "bg-[linear-gradient(to_right,var(--color-gray-800),var(--color-indigo-800),var(--color-gray-50),var(--color-indigo-900),var(--color-gray-800))] "
+               }
+               bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl`}
               data-aos="fade-up"
             >
               {/* Driving Growth Through Next-Gen Digital Solutions */}
@@ -103,7 +123,9 @@ export default function HeroHome() {
             </h1>
             <div className="mx-auto max-w-4xl">
               <p
-                className="mb-8 text-xl text-indigo-200/65"
+                className={`mb-8 text-xl text-indigo-200/65 ${
+                  darkMode ? "text-indigo-200/65" : "text-indigo-900/90"
+                }`}
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
@@ -130,7 +152,7 @@ export default function HeroHome() {
                 results-driven, smart, and scalable solutions.
               </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-                <div data-aos="fade-up" data-aos-delay={400}>
+                {/* <div data-aos="fade-up" data-aos-delay={400}>
                   <a
                     className="btn group mb-4 w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="/contact-us"
@@ -142,7 +164,7 @@ export default function HeroHome() {
                       </span>
                     </span>
                   </a>
-                </div>
+                </div> */}
                 {/* <div data-aos="fade-up" data-aos-delay={600}>
                   <a
                     className="btn relative w-full bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:ml-4 sm:w-auto"

@@ -10,6 +10,7 @@ import {
   Shield,
   Briefcase,
 } from "lucide-react"; // Lucide Icons
+import { useTheme } from "@/app/ThemeContext";
 
 export default function ServicesGoWappily() {
   const services = [
@@ -81,14 +82,28 @@ export default function ServicesGoWappily() {
     },
   ];
 
+  const { darkMode } = useTheme();
+
   return (
     <section id="about" className="py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+          <h1
+            className={`animate-[gradient_6s_linear_infinite] 
+          ${
+            darkMode
+              ? "bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))]"
+              : "bg-[linear-gradient(to_right,var(--color-gray-800),var(--color-indigo-800),var(--color-gray-50),var(--color-indigo-900),var(--color-gray-800))] "
+          }
+          bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl`}
+          >
             GoWappily Infotech
           </h1>
-          <p className="max-w-3xl mx-auto text-lg text-indigo-200/70">
+          <p
+            className={`max-w-3xl mx-auto text-lg t ${
+              darkMode ? "text-indigo-200/65" : "text-indigo-900/90"
+            }`}
+          >
             GoWappily Infotech offers <strong>45+ professional services</strong>{" "}
             in hosting, development, marketing, branding, and business
             automation — empowering brands to scale in today’s competitive
@@ -101,11 +116,13 @@ export default function ServicesGoWappily() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gray-900/50 flex-1 min-w-[300px] max-w-[350px]  rounded-xl p-6 border border-gray-800 hover:border-indigo-400 hover:scale-[1.05] transition-all duration-300 group"
+              className={`${
+                darkMode ? "bg-gray-900/50" : "bg-gray-900"
+              } flex-1 min-w-[300px] max-w-[350px]  rounded-xl p-6 border border-gray-800 hover:border-indigo-400 hover:scale-[1.05] transition-all duration-300 group`}
             >
               <div className="flex items-center gap-3 mb-4">
                 {service.icon}
-                <h3 className="text-xl font-semibold text-gray-200">
+                <h3 className="text-xl font-semibold text-gray-100">
                   {service.title}
                 </h3>
               </div>
@@ -118,7 +135,7 @@ export default function ServicesGoWappily() {
                   height={300}
                 />
               </div> */}
-              <ul className="space-y-2 text-indigo-200/70 text-sm">
+              <ul className="space-y-2 text-indigo-100 text-sm">
                 {service.list.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-indigo-400">•</span>
@@ -144,7 +161,7 @@ export default function ServicesGoWappily() {
             </span>
           </a>
           <a
-            className="btn relative w-full sm:w-auto sm:ml-4 bg-linear-to-b from-gray-800 to-gray-800/60 text-gray-300 hover:bg-[length:100%_150%]"
+            className="btn relative w-full sm:w-auto sm:ml-4 bg-linear-to-b from-gray-800 to-gray-800/60 text-gray-100 hover:bg-[length:100%_150%]"
             href="/services"
           >
             Explore All Services

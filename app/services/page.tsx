@@ -299,7 +299,7 @@
 //           </span>
 //         </div>
 //         <div className="text-center mb-16">
-//           <h1 className="font-serif animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+//           <h1 className="font-serif animate-[gradient_6s_linear_infinite] dark:bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[linear-gradient(to_right,var(--color-gray-800),var(--color-indigo-800),var(--color-gray-50),var(--color-indigo-900),var(--color-gray-800))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
 //             GoWappily Infotech
 //           </h1>
 //           <p className="max-w-3xl mx-auto text-lg text-indigo-200/70">
@@ -384,8 +384,11 @@ import {
   Megaphone,
   Database,
 } from "lucide-react";
+import { useTheme } from "../ThemeContext";
 
 export default function Services() {
+  const { darkMode, toggleTheme } = useTheme();
+
   const services = [
     {
       title: "Web Development",
@@ -464,17 +467,35 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-950 text-center">
+    <section
+      id="services"
+      className={`py-16  text-center ${
+        darkMode ? "bg-gray-950 text-gray-100" : "bg-white text-gray-900 "
+      } `}
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
+        {/* <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
           <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
             GoWappily Infotech
           </span>
-        </div>
-        <h1 className="font-serif bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 text-4xl md:text-5xl font-semibold text-transparent animate-[gradient_6s_linear_infinite]">
+        </div> */}
+        <h1
+          className={`font-serif 
+        ${
+          darkMode
+            ? "bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))]"
+            : "bg-[linear-gradient(to_right,var(--color-gray-800),var(--color-indigo-800),var(--color-gray-50),var(--color-indigo-900),var(--color-gray-800))] "
+        }
+
+        bg-[length:200%_auto] bg-clip-text pb-5 text-4xl md:text-5xl font-semibold text-transparent animate-[gradient_6s_linear_infinite]`}
+        >
           Premium Digital Services
         </h1>
-        <p className="max-w-3xl mx-auto mb-16 text-lg text-indigo-200/70">
+        <p
+          className={`max-w-3xl mx-auto mb-16 text-lg text-indigo-200/70  ${
+            darkMode ? "text-indigo-200/70" : "text-indigo-900/90"
+          }`}
+        >
           Scalable, future-ready, and performance-driven — every service we
           offer is designed to help your brand lead, not follow.
         </p>
@@ -483,7 +504,7 @@ export default function Services() {
           {services.map(({ title, icon, description, highlights }, idx) => (
             <div
               key={idx}
-              className="bg-gray-900/60 border border-gray-800 hover:border-indigo-500 hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.6)] rounded-2xl p-8 text-left transition-all duration-300 group"
+              className={`${darkMode?"bg-gray-900/60":"bg-gray-900"} border border-gray-800 hover:border-indigo-500 hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.6)] rounded-2xl p-8 text-left transition-all duration-300 group`}
             >
               <div className="flex items-center gap-4 mb-4">
                 {icon}

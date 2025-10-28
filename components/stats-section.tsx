@@ -1,5 +1,6 @@
 "use client";
 
+import { useTheme } from "@/app/ThemeContext";
 import { Users, Globe, Layers, Award, Clock, Shield } from "lucide-react";
 
 export default function StatsSection() {
@@ -36,23 +37,34 @@ export default function StatsSection() {
     },
   ];
 
+  const { darkMode } = useTheme();
+
   return (
     <section id="stats" className="py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         {/* Heading */}
-        <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
+        {/* <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
           <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
             GoWappily Infotech
           </span>
-        </div>
-        <div className="text-center mb-16">
-          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-            Our Impact in Numbers
+        </div> */}
+        <div className="text-center mb-10">
+          <h2
+            className={`animate-[gradient_6s_linear_infinite] 
+          ${
+            darkMode
+              ? "bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))]"
+              : "bg-[linear-gradient(to_right,var(--color-gray-800),var(--color-indigo-800),var(--color-gray-50),var(--color-indigo-900),var(--color-gray-800))] "
+          }
+
+          bg-[length:200%_auto] bg-clip-text pb-1 font-nacelle text-3xl font-semibold text-transparent md:text-4xl`}
+          >
+            Our Success Stories
           </h2>
-          <p className="max-w-3xl mx-auto text-lg text-indigo-200/70">
+          {/* <p className="max-w-3xl mx-auto text-lg text-indigo-200/70">
             Numbers speak louder than words — here’s how we’ve helped businesses
             grow and thrive.
-          </p>
+          </p> */}
         </div>
 
         {/* Stats Grid */}
@@ -60,7 +72,9 @@ export default function StatsSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-indigo-400 hover:scale-[1.05] transition-all duration-300 group"
+              className={`${
+                darkMode ? "bg-gray-900/50" : "bg-gray-900"
+              } p-8 rounded-xl border border-gray-800 hover:border-indigo-400 hover:scale-[1.05] transition-all duration-300 group`}
             >
               <div className="flex justify-center mb-4">{stat.icon}</div>
               <div className="text-4xl font-bold text-gray-200 mb-2 group-hover:text-indigo-400 transition-colors">

@@ -2,6 +2,14 @@
 
 import { useState } from "react";
 import useMasonry from "@/utils/useMasonry";
+import { useTheme } from "@/app/ThemeContext";
+import {
+  FaGlobe,
+  FaLaptopCode,
+  FaShoppingCart,
+  FaBuilding,
+  FaSolarPanel,
+} from "react-icons/fa";
 
 const testimonials = [
   {
@@ -114,26 +122,44 @@ const testimonials = [
 ];
 
 const categoriesList = [
-  { id: 1, label: "View All", icon: "M.062 10.003a1 1..." },
-  { id: 2, label: "Web Apps", icon: "M6.5 3.5a1.5 1.5..." },
-  { id: 3, label: "eCommerce", icon: "M2.428 10c.665-1.815..." },
-  { id: 4, label: "Enterprise", icon: "M3.757 3.758a6 6..." },
-  { id: 5, label: "Solar / IoT", icon: "M13.95.879a3 3..." },
+  { id: 1, label: "View All", icon: <FaGlobe /> },
+  { id: 2, label: "Web Apps", icon: <FaLaptopCode /> },
+  { id: 3, label: "eCommerce", icon: <FaShoppingCart /> },
+  { id: 4, label: "Enterprise", icon: <FaBuilding /> },
+  { id: 5, label: "Solar / IoT", icon: <FaSolarPanel /> },
 ];
 
 export default function Testimonials() {
   const masonryContainer = useMasonry();
   const [category, setCategory] = useState<number>(1);
 
+  const { darkMode } = useTheme();
+
   return (
     <div id="testimonials" className="mx-auto max-w-6xl px-4 sm:px-6">
       <div className="border-t py-12 md:py-20 border-gray-700/30">
         {/* Section header */}
         <div className="mx-auto max-w-3xl pb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-gray-200 to-indigo-300 animate-gradient-x">
+          <h2
+            className={`text-3xl md:text-4xl font-semibold bg-clip-text text-transparent 
+          bg-gradient-to-r 
+
+          ${
+            darkMode
+              ? "from-indigo-200 via-gray-200 to-indigo-300 "
+              : "from-indigo-800 via-gray-800 to-indigo-900"
+          }
+          
+          
+          animate-gradient-x`}
+          >
             Don't take our word for it
           </h2>
-          <p className="text-lg text-indigo-200/65">
+          <p
+            className={`¯ßtext-lg  ${
+              darkMode ? "text-indigo-200/65 " : "text-indigo-900/90 "
+            } `}
+          >
             We provide tech-first solutions that empower decision-makers to
             build healthier and happier workspaces from anywhere in the world.
           </p>
@@ -141,28 +167,30 @@ export default function Testimonials() {
 
         {/* Category Buttons */}
         <div className="flex justify-center pb-12 max-md:hidden md:pb-16">
-          <div className="inline-flex rounded-full bg-gray-800/40 p-1">
+          <div
+            className={`inline-flex rounded-full ${
+              darkMode ? "bg-gray-800/40" : "bg-gray-100"
+            } p-1`}
+          >
             {categoriesList.map((cat) => (
               <button
                 key={cat.id}
                 className={`flex h-8 items-center gap-2.5 px-3 rounded-full text-sm font-medium transition-colors ${
                   category === cat.id
-                    ? "bg-indigo-500/20 text-indigo-400 shadow-inner"
-                    : "text-gray-400 hover:text-indigo-300 hover:bg-gray-700/50"
+                    ? // Active state
+                      darkMode
+                      ? "bg-indigo-500/20 text-indigo-400 shadow-inner" // Active dark mode
+                      : "bg-gray-900 text-indigo-100 shadow-inner" // Active light mode
+                    : // Inactive state
+                    darkMode
+                    ? "text-gray-400 hover:text-indigo-300 hover:bg-gray-700/50" // Inactive dark mode
+                    : "text-gray-800 bg-indigo-200 hover:text-indigo-100 hover:bg-gray-700" // Inactive light mode
                 }`}
                 aria-pressed={category === cat.id}
                 onClick={() => setCategory(cat.id)}
               >
-                <svg
-                  className={`fill-current ${
-                    category === cat.id ? "text-indigo-500" : "text-gray-600"
-                  }`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                >
-                  <path d={cat.icon} />
-                </svg>
+                {cat.icon}
+
                 <span>{cat.label}</span>
               </button>
             ))}
@@ -203,10 +231,16 @@ export function Testimonial({
 }) {
   const isActive = testimonial.categories.includes(category) || category === 1;
 
+  const { darkMode } = useTheme();
+
   return (
     <article
-      className={`relative rounded-2xl bg-gray-900/50 p-5 backdrop-blur-xs transition-all duration-300 transform ${
-        isActive ? "opacity-100 scale-100" : "opacity-40 scale-95"
+      className={`relative rounded-2xl p-5 backdrop-blur-xs transition-all duration-300 transform ${
+        isActive
+          ? darkMode
+            ? "bg-gray-900/50 opacity-100 scale-100"
+            : "bg-gray-900 opacity-100 scale-100"
+          : "opacity-100 scale-95"
       }`}
     >
       <div className="flex flex-col gap-4">
@@ -217,7 +251,11 @@ export function Testimonial({
           alt="Client logo"
           className="h-8 w-8 rounded-full bg-white"
         />
-        <p className="text-indigo-200/65 before:content-['“'] after:content-['”']">
+        <p
+          className={`${
+            darkMode ? "text-indigo-200/65" : "text-indigo-100"
+          } before:content-['“'] after:content-['”']`}
+        >
           {testimonial.content}
         </p>
         <div className="flex items-center gap-3 text-sm text-gray-200">

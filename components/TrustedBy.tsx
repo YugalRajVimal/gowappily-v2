@@ -7,6 +7,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTheme } from "@/app/ThemeContext";
 
 // ✅ Interfaces
 interface ClientLogo {
@@ -33,7 +34,11 @@ interface AnimatedCounterProps {
 }
 
 // ✅ Animated Counter Component
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ end, icon, name }) => {
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+  end,
+  icon,
+  name,
+}) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [inView, setInView] = useState(false);
 
@@ -119,7 +124,8 @@ const BrandLogoSlider: React.FC<BrandLogoSliderProps> = ({ clientLogos }) => (
                 src={client.image}
                 alt={client.name}
                 className={`max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-110 ${
-                  client.image.includes("com11.svg") || client.image.includes("com12.svg")
+                  client.image.includes("com11.svg") ||
+                  client.image.includes("com12.svg")
                     ? "scale-[1.8] hover:scale-[2.2]"
                     : ""
                 }`}
@@ -154,11 +160,13 @@ const TrustedBy: React.FC = () => {
     { id: 3, name: "Projects Completed", count: 500, icon: "+" },
   ];
 
+  const { darkMode } = useTheme();
+
   return (
-    <section className="pt-24 ">
+    <section className="">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm uppercase tracking-widest text-white mb-4 font-montserrat">
             Our Clients
           </h2>
@@ -169,26 +177,41 @@ const TrustedBy: React.FC = () => {
             We’re proud to collaborate with innovative brands across industries
             to deliver exceptional creative solutions.
           </p>
-        </div>
+        </div> */}
 
         {/* Brand Logos */}
         <div className="">
           <div className="md:container mx-auto">
-            <div className="rounded-xl p-8 md:px-10 md:pb-10 shadow-md">
+            <div className="rounded-xl p-8 md:px-10 md:pb-10 ">
               <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-white  font-montserrat mb-2">
+                <h2
+                  className={`text-3xl md:text-4xl font-bold   font-montserrat mb-2  ${
+                    darkMode ? "text-white" : "text-indigo-900/90"
+                  }`}
+                >
                   Our Trusted Partners
                 </h2>
                 <p className="text-gray-600 font-roboto">
                   We’re proud to collaborate with these amazing brands
                 </p>
                 <div className="w-24 h-1 bg-white mx-auto mt-4" />
+                <div className="mt-2 text-center">
+                  <a
+                    className="btn group w-full sm:w-auto bg-linear-to-t from-indigo-600 to-indigo-500 text-white hover:bg-[length:100%_150%]"
+                    href="/contact-us"
+                  >
+                    <span className="relative inline-flex items-center">
+                      Partner with Us
+                      <span className="ml-1 text-white/50 group-hover:translate-x-0.5 transition-transform">
+                        -&gt;
+                      </span>
+                    </span>
+                  </a>
+                </div>
               </div>
 
               <BrandLogoSlider clientLogos={clientLogos} />
             </div>
-
-         
           </div>
         </div>
       </div>

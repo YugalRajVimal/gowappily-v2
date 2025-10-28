@@ -38,13 +38,13 @@ export default function HomeClient() {
       </Head>
       <PageIllustration />
       <Hero />
-      <Workflows />
+      {/* <Workflows /> */}
       <TrustedBy />
       <Services />
       {/* <PlansSection /> */}
-      <BenefitsSection />
+      {/* <BenefitsSection /> */}
       <StatsSection />
-      <Features />
+      {/* <Features /> */}
       <Testimonials />
       <Cta />
     </>

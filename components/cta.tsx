@@ -1,6 +1,8 @@
+import { useTheme } from "@/app/ThemeContext";
 import Image from "next/image";
 
 export default function Cta() {
+  const { darkMode } = useTheme();
   return (
     <section className="relative overflow-hidden">
       {/* Background Shape */}
@@ -17,12 +19,24 @@ export default function Cta() {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="bg-linear-to-r from-transparent via-gray-800/20 py-12 md:py-20">
+      <div className="w-screen mx-auto">
+        <div
+          className={` ${
+            darkMode
+              ? " bg-linear-to-r  from-transparent via-gray-900/20"
+              : "  "
+          }  px-4 sm:px-6 py-12 md:py-20`}
+        >
           <div className="mx-auto max-w-3xl text-center">
             {/* Title */}
             <h2
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
+              className={`animate-[gradient_6s_linear_infinite] 
+              ${
+                darkMode
+                  ? "bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))]"
+                  : "bg-[linear-gradient(to_right,var(--color-gray-800),var(--color-indigo-800),var(--color-gray-50),var(--color-indigo-900),var(--color-gray-800))] "
+              }
+              bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl`}
               data-aos="fade-up"
             >
               Empowering Businesses with Next-Gen Web Solutions
@@ -30,7 +44,7 @@ export default function Cta() {
 
             {/* Subtitle */}
             <p
-              className="text-gray-300 mb-8 text-lg"
+              className={`${darkMode?"text-gray-300":"text-gray-900"} mb-8 text-lg`}
               data-aos="fade-up"
               data-aos-delay={200}
             >
@@ -56,7 +70,7 @@ export default function Cta() {
               </div>
               <div data-aos="fade-up" data-aos-delay={600}>
                 <a
-                  className="btn relative w-full bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:ml-4 sm:w-auto"
+                  className="btn relative w-full bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] text-gray-100 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%] sm:ml-4 sm:w-auto"
                   href="/demo"
                 >
                   Book a Free Consultation

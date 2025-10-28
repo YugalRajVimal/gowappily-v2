@@ -42,7 +42,7 @@ export default function Features() {
                 GoWappily Infotech
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] dark:bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[linear-gradient(to_right,var(--color-gray-800),var(--color-indigo-800),var(--color-gray-50),var(--color-indigo-900),var(--color-gray-800))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Your All-in-One Digital Solutions Partner
             </h2>
             <p className="text-lg text-indigo-200/65">
@@ -63,7 +63,9 @@ export default function Features() {
                 </h3>
               </div>
               <p className="text-indigo-200/65 pl-8">
-                Responsive websites, custom web apps, e-commerce platforms, SEO-ready structures, and seamless API integrations tailored to your business.
+                Responsive websites, custom web apps, e-commerce platforms,
+                SEO-ready structures, and seamless API integrations tailored to
+                your business.
               </p>
             </article>
 
@@ -76,7 +78,9 @@ export default function Features() {
                 </h3>
               </div>
               <p className="text-indigo-200/65 pl-8">
-                Native Android & iOS apps, cross-platform solutions, engaging UI/UX design, real-time updates, and ongoing app support and maintenance.
+                Native Android & iOS apps, cross-platform solutions, engaging
+                UI/UX design, real-time updates, and ongoing app support and
+                maintenance.
               </p>
             </article>
 
@@ -89,7 +93,9 @@ export default function Features() {
                 </h3>
               </div>
               <p className="text-indigo-200/65 pl-8">
-                Comprehensive on-page and technical SEO, keyword research, local SEO, audits, and content optimization to boost your search rankings.
+                Comprehensive on-page and technical SEO, keyword research, local
+                SEO, audits, and content optimization to boost your search
+                rankings.
               </p>
             </article>
 
@@ -102,7 +108,9 @@ export default function Features() {
                 </h3>
               </div>
               <p className="text-indigo-200/65 pl-8">
-                Facebook, Instagram, Twitter, and LinkedIn campaigns with content creation, audience engagement, ad management, and detailed analytics.
+                Facebook, Instagram, Twitter, and LinkedIn campaigns with
+                content creation, audience engagement, ad management, and
+                detailed analytics.
               </p>
             </article>
 
@@ -115,7 +123,9 @@ export default function Features() {
                 </h3>
               </div>
               <p className="text-indigo-200/65 pl-8">
-                ROI-driven paid media campaigns on Google Ads and Meta Ads, conversion tracking, A/B testing, and campaign optimization to maximize growth.
+                ROI-driven paid media campaigns on Google Ads and Meta Ads,
+                conversion tracking, A/B testing, and campaign optimization to
+                maximize growth.
               </p>
             </article>
 
@@ -128,7 +138,9 @@ export default function Features() {
                 </h3>
               </div>
               <p className="text-indigo-200/65 pl-8">
-                Custom CRM development, ERP implementation, workflow automation, sales dashboards, and business data reporting for smarter operations.
+                Custom CRM development, ERP implementation, workflow automation,
+                sales dashboards, and business data reporting for smarter
+                operations.
               </p>
             </article>
           </div>
