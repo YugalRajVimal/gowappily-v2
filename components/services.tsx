@@ -164,7 +164,7 @@ export default function ServicesGoWappily() {
             className="btn relative w-full sm:w-auto sm:ml-4 bg-linear-to-b from-gray-800 to-gray-800/60 text-gray-100 hover:bg-[length:100%_150%]"
             href="/services"
           >
-            Explore All Services
+            Explore Our Prices
           </a>
         </div>
       </div>
