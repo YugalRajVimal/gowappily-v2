@@ -1,6 +1,7 @@
 "use client";
 
 import "./css/style.css";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -48,8 +49,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-
   return (
     <html lang="en">
       <ThemeProvider>
@@ -70,6 +69,20 @@ export default function RootLayout({
           </CustomerAuthProvider>
         </body>
       </ThemeProvider>
+
+      {/* Google Tag Manager Script */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17700753213"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-gtag" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17700753213');
+          `}
+      </Script>
     </html>
   );
 }
