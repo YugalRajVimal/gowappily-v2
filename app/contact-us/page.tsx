@@ -98,7 +98,7 @@ const ContactUs = () => {
     phone: "+918800592770",
     phone2: "+916398960435",
     location: {
-      address1: "G13, sector 6, Noida, 201301",
+      address1: "D-57, Sector 10, Noida, 201301",
     },
   };
 
@@ -637,7 +637,7 @@ const ContactUs = () => {
 
           <div className="overflow-hidden rounded-lg border border-gold-accent/30 shadow-gold">
            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3503.2913902531945!2d77.33298907549924!3d28.591033975687466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM1JzI3LjciTiA3N8KwMjAnMDguMCJF!5e0!3m2!1sen!2sin!4v1764676688902!5m2!1sen!2sin" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.295341704934!2d77.3353626!3d28.5909154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5df1f67052b%3A0xdec650a67ca135ac!2sXpert%20Internet%20Services%20(XISPL)!5e0!3m2!1sen!2sin!4v1764677605210!5m2!1sen!2sin"
              width="100%"
              height="450"
              style={{ border: 0 }}
@@ -647,6 +647,7 @@ const ContactUs = () => {
              className="grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
              title="Location Map"
              ></iframe>
+
           </div>
         </div>
       </section>
