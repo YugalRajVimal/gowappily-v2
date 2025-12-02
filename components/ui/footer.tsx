@@ -162,8 +162,8 @@
 //             </p>
 //             <p className="text-sm text-indigo-200/65 transition hover:text-indigo-500">
 //               Email:{" "}
-//               <a href="mailto:info@gowappily.com" className="hover:underline">
-//                 info@gowappily.com
+//               <a href="mailto:gowappily@gmail.com" className="hover:underline">
+//                 gowappily@gmail.com
 //               </a>
 //             </p>
 //             <div className="flex space-x-4 mt-4">
@@ -310,7 +310,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="space-y-2 flex-1">
             <h3 className={`text-sm font-medium ${textPrimary}`}>Contact Us</h3>
-            <p className={`text-sm ${textSecondary}`}>Address: G-13, Sector 6, Noida</p>
+            <p className={`text-sm ${textSecondary}`}>Address: D-57, Sector 10, Noida</p>
             <p className={`text-sm ${textSecondary}`}>
               Phone:{" "}
               <a href="tel:+916398960435" className={`hover:underline ${hoverColor}`}>
@@ -325,8 +325,8 @@ export default function Footer() {
             </p>
             <p className={`text-sm ${textSecondary}`}>
               Email:{" "}
-              <a href="mailto:info@gowappily.com" className={`hover:underline ${hoverColor}`}>
-                info@gowappily.com
+              <a href="mailto:gowappily@gmail.com" className={`hover:underline ${hoverColor}`}>
+                gowappily@gmail.com
               </a>
             </p>
 

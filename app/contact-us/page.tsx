@@ -57,7 +57,7 @@ const ContactUs = () => {
     }
 
     try {
-      const response = await fetch("https://api.gowappily.com/send-mail", {
+      const response = await fetch("https://api.gowappily.in/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -94,7 +94,7 @@ const ContactUs = () => {
   };
 
   const contactInfo = {
-    email: "info@gowappily.com",
+    email: "gowappily@gmail.com",
     phone: "+918800592770",
     phone2: "+916398960435",
     location: {
@@ -636,17 +636,17 @@ const ContactUs = () => {
           </div>
 
           <div className="overflow-hidden rounded-lg border border-gold-accent/30 shadow-gold">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.123898194189!2d77.31833771134636!3d28.5960596856341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4f07f856ea3%3A0x16842c36e33733ca!2sBlock%20G%2C%20G13%2C%20G%20Block%2C%20Sector%206%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1756104655477!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
-              title="Location Map"
-            ></iframe>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3503.2913902531945!2d77.33298907549924!3d28.591033975687466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM1JzI3LjciTiA3N8KwMjAnMDguMCJF!5e0!3m2!1sen!2sin!4v1764676688902!5m2!1sen!2sin" 
+             width="100%"
+             height="450"
+             style={{ border: 0 }}
+             allowFullScreen
+             loading="lazy"
+             referrerPolicy="no-referrer-when-downgrade"
+             className="grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+             title="Location Map"
+             ></iframe>
           </div>
         </div>
       </section>
